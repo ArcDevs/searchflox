@@ -4,14 +4,14 @@
 [![Python Versions](https://img.shields.io/pypi/pyversions/searchflow.svg)](https://pypi.org/project/searchflow/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**SearchFlow, powered by ArcDevs, is an AI-Powered Research Platform and advanced CLI tool designed for intelligent research and automated report generation.**
+**SearchFlow, powered by ArcDevs, is an AI-Powered Research Platform and advanced CLI tool leveraging ArcDevs Intelligence for intelligent research and automated report generation.**
 
-It leverages AI agents to connect to services and perform comprehensive searches, analyze information, and compile reports based on user queries.
+It utilizes AI agents to connect to services and perform comprehensive searches, analyze information, and compile reports based on user queries.
 *(For educational purposes, this project explores concepts similar to those that might be used by services like `searc.ai`.)*
 
 ## Features
 
-*   **AI-Powered Research:** Utilizes advanced AI for in-depth information gathering.
+*   **AI-Powered Research:** Employs advanced AI for in-depth information gathering.
 *   **Multiple Report Types:** Generate summaries, detailed reports, or multi-agent analyses.
 *   **Customizable Tone:** Adjust the writing tone of reports (Objective, Formal, Analytical, etc.).
 *   **Domain Filtering:** Focus research on specific websites or domains.
@@ -149,4 +149,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 *   ArcDevs Corp
 
 ---
-*Powered by SearchFlow AI Intelligence*
+*Powered by ArcDevs Intelligence*
