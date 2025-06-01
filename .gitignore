@@ -1,0 +1,157 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+# Uncomment these lines if you use PyInstaller
+# *.spec
+# *.pyzw
+# *.pyz
+# *.pyo
+# *.pyd
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+# *.log
+# local_settings.py
+# db.sqlite3
+# db.sqlite3-journal
+
+# Flask stuff:
+# instance/
+# .webassets-cache
+
+# Scrapy stuff:
+# .scrapy
+
+# Sphinx documentation
+# docs/_build/
+
+# PyBuilder
+# target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+# .python-version
+
+# PEP 582; __pypackages__
+__pypackages__/
+
+# Celery stuff
+# celerybeat-schedule
+# celerybeat.pid
+
+# SageMath files
+# .sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+# /site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.project
+*.tmproj
+*.sublime-project
+*.sublime-workspace
+project.xcworkspace/
+# Atom
+.atom/
+# Netbeans
+nbproject/
+# Eclipse
+.project
+.pydevproject
+.settings/
+# Komodo
+*.kpf
+# Cloud9
+.c9/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# SearchFlow specific user configuration (if it were stored locally, which it isn't for this project design)
+# This project stores config in ~/.searchflow/config.json which is outside the repo and thus fine.
+# If you had a local_config.json or similar *inside* the project for developer overrides, you'd add it:
+# local_config.json
