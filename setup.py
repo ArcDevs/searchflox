@@ -11,7 +11,7 @@ with open(os.path.join(this_directory, 'requirements.txt'), encoding='utf-8') as
     requirements = [line.strip() for line in f if line.strip() and not line.startswith('#')]
 
 setup(
-    name="searchflow",
+    name="searchflox",
     version="1.0.0",
     author="KOBULA & UTKRASH RISHI",
     author_email="support@arcdevs.com",
@@ -74,7 +74,7 @@ setup(
         "intelligence", "academic", "professional", "async", "real-time"
     ],
     package_data={
-        "searchflow": [
+        "searchflox": [
             "config/*.json",
             "templates/*.txt",
             "assets/*",
