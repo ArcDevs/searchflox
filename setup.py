@@ -18,12 +18,11 @@ setup(
     description="AI-Powered Research Platform - Advanced CLI tool for intelligent research and report generation",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/arcdevs/searchflow",
+    url="https://github.com/ArcDevs/searchflow",
     project_urls={
-        "Bug Reports": "https://github.com/arcdevs/searchflow/issues",
-        "Source": "https://github.com/arcdevs/searchflow",
-        "Documentation": "https://searchflow.readthedocs.io/",
-        "Funding": "https://github.com/sponsors/arcdevs",
+        "Bug Reports": "https://github.com/ArcDevs/searchflow/issues",
+        "Source": "https://github.com/ArcDevs/searchflow",
+        "Documentation": "https://github.com/ArcDevs/searchflow#readme",
     },
     packages=find_packages(), 
     classifiers=[

@@ -472,7 +472,7 @@ Examples:
   searchflow "Python web frameworks" --output report.md --format markdown
 
 💬 Join our community: https://t.me/ArcAgents
-For more help, visit {self.config.get("base_url", "your_project_url_here")}
+For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/searchflow")}
 {CREDITS}
             """
         )
