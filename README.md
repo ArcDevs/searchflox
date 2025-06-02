@@ -47,9 +47,9 @@ searchflox "your research query here"
 searchflox "latest advancements in quantum computing"
 ```
 
-You can also use the short alias `sfx`:
+You can also use the short alias `sf`:
 ```bash
-sfx "latest advancements in quantum computing"
+sf "latest advancements in quantum computing"
 ```
 
 ### Command-Line Options
@@ -71,7 +71,7 @@ Fine-tune your research with these options:
     *   `persuasive`: Convincing and argumentative
     *   `informative`: Clear and comprehensive
     ```bash
-    sfx -o formal "economic impact of renewable energy"
+    sf -o formal "economic impact of renewable energy"
     ```
 
 *   **Specific Domains (`-d` or `--domains`):**
@@ -90,7 +90,7 @@ Fine-tune your research with these options:
     Save your research findings directly to a file. Supported formats: `text`, `markdown`, `json`.
     ```bash
     searchflox "Python web frameworks" -O report.md --format markdown
-    sfx "Market analysis of AI startups" -O analysis.json --format json
+    sf "Market analysis of AI startups" -O analysis.json --format json
     ```
 
 ### Interactive Mode
@@ -100,7 +100,7 @@ For an engaging session with multiple queries or to easily change settings on th
 ```bash
 searchflox --interactive
 # or
-sfx --interactive
+sf --interactive
 ```
 
 Inside interactive mode:
@@ -115,7 +115,7 @@ Customize your default SearchFlox experience:
 ```bash
 searchflox --config
 # or
-sfx --config
+sf --config
 ```
 
 Set your preferred report type, tone, and other settings. These are typically saved to `~/.searchflox/config.json` (the directory name matches the package).
@@ -146,7 +146,7 @@ Want to contribute or run SearchFlox locally?
     ```
 
 4.  **Run the CLI:**
-    You can now run `searchflox` (or `sfx`) from your terminal. Changes to the source code will be reflected immediately.
+    You can now run `searchflox` (or `sf`) from your terminal. Changes to the source code will be reflected immediately.
     ```bash
     searchflox --version
     ```
