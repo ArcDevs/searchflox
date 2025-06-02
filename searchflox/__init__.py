@@ -9,9 +9,9 @@ from .main import (
     __email__,
     __license__,
     APP_NAME,
-    SearchFlowConfig,
-    SearchFlowEngine,
-    SearchFlowCLI,
+    SearchFloxConfig,
+    SearchFloxEngine,
+    SearchFloxCLI,
     main 
 )
 
@@ -21,8 +21,8 @@ __all__ = [
     "__email__",
     "__license__",
     "APP_NAME",
-    "SearchFlowConfig",
-    "SearchFlowEngine",
-    "SearchFlowCLI",
+    "SearchFloxConfig",
+    "SearchFloxEngine",
+    "SearchFloxCLI",
     "main",
 ]

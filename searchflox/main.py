@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SearchFlow - Advanced AI Research Platform
+SearchFlox - Advanced AI Research Platform
 A powerful CLI tool for AI-powered research and report generation.
 
 Author: KOBULA & UTKRASH RISHI from ArcDevs Corp
@@ -21,7 +21,7 @@ import os
 from urllib.parse import quote
 from typing import Dict, List, Optional, Any
 
-__version__ = "1.0.0"
+__version__ = "1.0.2"
 __author__ = "KOBULA & UTKRASH RISHI from ArcDevs Corp"
 __email__ = "arcdev.90@gmail.com"
 __license__ = "MIT"
@@ -52,7 +52,7 @@ if not sys.stdout.isatty():
 
 C = Colors
 
-APP_NAME = "SearchFlow"
+APP_NAME = "SearchFlox"
 APP_TITLE = f"{C.BOLD}{C.CYAN}{APP_NAME} - AI Research Platform{C.RESET} {C.YELLOW}v{__version__}{C.RESET}"
 CREDITS = f"{C.BOLD}{C.GREEN}Developed by KOBULA & UTKRASH RISHI{C.RESET} {C.YELLOW}| ArcDevs Corp{C.RESET}\n{C.CYAN}💬 Join our Telegram: {C.UNDERLINE}https://t.me/ArcAgents{C.RESET}"
 SEPARATOR = f"{C.BLUE}{'=' * 70}{C.RESET}"
@@ -93,9 +93,9 @@ DEFAULT_CONFIG = {
     "max_retries": 3
 }
 
-class SearchFlowConfig:
+class SearchFloxConfig:
     def __init__(self, config_path: Optional[str] = None):
-        self.config_path = config_path or os.path.expanduser("~/.searchflow/config.json")
+        self.config_path = config_path or os.path.expanduser("~/.searchflox/config.json")
         self.config = DEFAULT_CONFIG.copy()
         self.load_config()
 
@@ -176,8 +176,8 @@ class ProgressIndicator:
             i += 1
             time.sleep(0.1)
 
-class SearchFlowEngine:
-    def __init__(self, config: SearchFlowConfig):
+class SearchFloxEngine:
+    def __init__(self, config: SearchFloxConfig):
         self.config = config
         self.interrupt_handler = InterruptHandler()
 
@@ -194,7 +194,7 @@ class SearchFlowEngine:
 
         headers = {
             "Origin": "https://searc.ai",
-            "User-Agent": f"SearchFlow/{__version__} (CLI; Python/{sys.version_info.major}.{sys.version_info.minor})",
+            "User-Agent": f"SearchFlox/{__version__} (CLI; Python/{sys.version_info.major}.{sys.version_info.minor})",
             "Cache-Control": "no-cache",
             "Pragma": "no-cache"
         }
@@ -210,9 +210,9 @@ class SearchFlowEngine:
             progress = ProgressIndicator("AI Research in Progress")
             progress.start()
 
-        print(f"\n{C.BOLD}🚀 SearchFlow Research Initiated:{C.RESET} {QUERY_COLOR}{query}{C.RESET}")
+        print(f"\n{C.BOLD}🚀 SearchFlox Research Initiated:{C.RESET} {QUERY_COLOR}{query}{C.RESET}")
         print(f"{INFO_COLOR}   Report: {report_type} | Tone: {tone} | Domains: {', '.join(domains) if domains else 'Any'}{C.RESET}")
-        print(f"{C.YELLOW}   Powered by SearchFlow AI Intelligence{C.RESET}")
+        print(f"{C.YELLOW}   Powered by SearchFlox AI Intelligence{C.RESET}")
         
         self.interrupt_handler.interrupted = False
 
@@ -232,7 +232,7 @@ class SearchFlowEngine:
                 }
 
                 message = f'start {json.dumps(payload)}'
-                print(f"{C.YELLOW}📤 Connecting to SearchFlow Intelligence...{C.RESET}")
+                print(f"{C.YELLOW}📤 Connecting to SearchFlox Intelligence...{C.RESET}")
                 await websocket.send(message)
                 print(f"{SUCCESS_COLOR}✅ Connected! AI agents are now researching...{C.RESET}")
 
@@ -293,7 +293,7 @@ class SearchFlowEngine:
         except websockets.exceptions.WebSocketException as e: 
             print(f"{ERROR_COLOR}❌ WebSocket Connection Error: {e}{C.RESET}")
         except ConnectionRefusedError:
-            print(f"{ERROR_COLOR}❌ Connection Refused: Cannot connect to SearchFlow server at {uri}. Is it running?{C.RESET}")
+            print(f"{ERROR_COLOR}❌ Connection Refused: Cannot connect to SearchFlox server at {uri}. Is it running?{C.RESET}")
         except KeyboardInterrupt:
             if progress: progress.stop()
             final_report_str = "".join(final_report_parts)
@@ -303,7 +303,7 @@ class SearchFlowEngine:
                                               message_count, duration, base_url, interrupted=True)
         except Exception as e:
             if progress: progress.stop()
-            print(f"{ERROR_COLOR}❌ An unexpected error occurred in SearchFlowEngine: {e}{C.RESET}")
+            print(f"{ERROR_COLOR}❌ An unexpected error occurred in SearchFloxEngine: {e}{C.RESET}")
             if show_logs or self.config.get("debug_mode", False): 
                 traceback.print_exc()
         finally:
@@ -401,9 +401,9 @@ class SearchFlowEngine:
                               message_count: int, duration: float, base_url: str, interrupted: bool = False) -> Dict[str, Any]:
         print(f"\n{SEPARATOR}")
         if interrupted:
-            print(f"{C.BOLD}{C.YELLOW}📊 Partial SearchFlow Research Results 📊{C.RESET}")
+            print(f"{C.BOLD}{C.YELLOW}📊 Partial SearchFlox Research Results 📊{C.RESET}")
         else:
-            print(f"{C.BOLD}{C.CYAN}📊 SearchFlow Research Complete 📊{C.RESET}")
+            print(f"{C.BOLD}{C.CYAN}📊 SearchFlox Research Complete 📊{C.RESET}")
         print(f"{INFO_COLOR}   Duration: {duration:.1f}s | Messages Processed: {message_count}{C.RESET}")
 
         unique_sources = sorted(list(set(s for s in sources if s and s.startswith("http")))) 
@@ -452,27 +452,27 @@ class SearchFlowEngine:
         }
 
 
-class SearchFlowCLI:
+class SearchFloxCLI:
     def __init__(self):
-        self.config = SearchFlowConfig()
-        self.engine = SearchFlowEngine(self.config)
+        self.config = SearchFloxConfig()
+        self.engine = SearchFloxEngine(self.config)
 
     def create_parser(self) -> argparse.ArgumentParser:
         parser = argparse.ArgumentParser(
-            prog="searchflow",
+            prog="searchflox",
             description=f"{APP_NAME} - AI-Powered Research Platform. {__version__}",
             formatter_class=argparse.RawDescriptionHelpFormatter,
             epilog=f"""
 Examples:
-  searchflow "impact of AI on climate change mitigation"
-  searchflow -t detailed -o formal "latest trends in quantum machine learning"
-  searchflow --domains arxiv.org,nature.com,sciencemag.org "CRISPR gene editing ethics"
-  searchflow --interactive                 # Start interactive mode
-  searchflow --config                      # Configure default settings
-  searchflow "Python web frameworks" --output report.md --format markdown
+  searchflox "impact of AI on climate change mitigation"
+  searchflox -t detailed -o formal "latest trends in quantum machine learning"
+  searchflox --domains arxiv.org,nature.com,sciencemag.org "CRISPR gene editing ethics"
+  searchflox --interactive                 # Start interactive mode
+  searchflox --config                      # Configure default settings
+  searchflox "Python web frameworks" --output report.md --format markdown
 
 💬 Join our community: https://t.me/ArcAgents
-For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/searchflow")}
+For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/searchflox")}
 {CREDITS}
             """
         )
@@ -503,7 +503,7 @@ For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/se
 
         interface_group = parser.add_argument_group('Interface Options')
         interface_group.add_argument("-i", "--interactive", action="store_true", help="Start interactive mode for multiple queries.")
-        interface_group.add_argument("--config", action="store_true", help="Configure SearchFlow default settings (report type, tone).")
+        interface_group.add_argument("--config", action="store_true", help="Configure SearchFlox default settings (report type, tone).")
 
         output_group = parser.add_argument_group('Output Options')
         output_group.add_argument("--output", "-O", metavar="FILEPATH", help="Save the generated report to a file.")
@@ -542,11 +542,11 @@ For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/se
                 await self._single_search(query_str, args, report_type_api=args.type, tone_api=api_tone)
             else:
                 parser.print_help()
-                print(f"\n{C.YELLOW}Use 'searchflow --interactive' for interactive mode or 'searchflow <your query>' to search.{C.RESET}")
+                print(f"\n{C.YELLOW}Use 'searchflox --interactive' for interactive mode or 'searchflox <your query>' to search.{C.RESET}")
 
 
         except KeyboardInterrupt:
-            print(f"\n{C.YELLOW}👋 SearchFlow interrupted. Exiting gracefully.{C.RESET}")
+            print(f"\n{C.YELLOW}👋 SearchFlox interrupted. Exiting gracefully.{C.RESET}")
         except Exception as e:
             print(f"{ERROR_COLOR}❌ Unexpected CLI Error: {e}{C.RESET}")
             # traceback.print_exc() # Uncomment for debugging CLI errors
@@ -580,7 +580,7 @@ For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/se
 
         while True:
             try:
-                raw_input_str = input(f"\n{PROMPT_COLOR}SearchFlow ({current_report_type_api}/{current_tone_api})> {C.RESET}").strip()
+                raw_input_str = input(f"\n{PROMPT_COLOR}SearchFlox ({current_report_type_api}/{current_tone_api})> {C.RESET}").strip()
 
                 if not raw_input_str:
                     continue
@@ -638,8 +638,8 @@ For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/se
 
                 else:
                     # Check if user is trying to use CLI commands in interactive mode
-                    if raw_input_str.startswith("sf ") or raw_input_str.startswith("searchflow "):
-                        print(f"{ERROR_COLOR}❌ Don't use 'sf' or 'searchflow' prefix in interactive mode. Just type the command directly.{C.RESET}")
+                    if raw_input_str.startswith("sf ") or raw_input_str.startswith("searchflox "):
+                        print(f"{ERROR_COLOR}❌ Don't use 'sf' or 'searchflox' prefix in interactive mode. Just type the command directly.{C.RESET}")
                         print(f"{C.YELLOW}   Example: Instead of 'sf --config', just type 'config'{C.RESET}")
                         continue
                     
@@ -661,7 +661,7 @@ For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/se
 
 
     async def _configure(self):
-        print(f"\n{C.BOLD}{C.CYAN}⚙️  SearchFlow Configuration (Defaults){C.RESET}")
+        print(f"\n{C.BOLD}{C.CYAN}⚙️  SearchFlox Configuration (Defaults){C.RESET}")
         print(f"{C.WHITE}Current settings are saved to: {self.config.config_path}{C.RESET}")
 
         # Report type
@@ -711,7 +711,7 @@ For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/se
 
 
     def _show_interactive_help(self):
-        print(f"\n{C.BOLD}{C.CYAN}SearchFlow Interactive Mode Help{C.RESET}")
+        print(f"\n{C.BOLD}{C.CYAN}SearchFlox Interactive Mode Help{C.RESET}")
         print(f"""
 {C.BOLD}Commands:{C.RESET}
   <your query>          - Perform a research task with current settings.
@@ -726,7 +726,7 @@ For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/se
   quit / q / exit       - Exit interactive mode.
 
 {C.BOLD}Current Settings (Interactive Session Only):{C.RESET}
-  You can see current type/tone in the prompt: SearchFlow (type/tone)>
+  You can see current type/tone in the prompt: SearchFlox (type/tone)>
   To change defaults permanently, use 'config'.
         """)
 
@@ -766,7 +766,7 @@ For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/se
         report_type = result.get("report_type", "N/A") 
         tone = result.get("tone", "N/A")
 
-        md = f"# SearchFlow Research Report\n\n"
+        md = f"# SearchFlox Research Report\n\n"
         md += f"**Query:** `{query}` (Placeholder - actual query not in result dict yet)\n"
         md += f"**Report Type:** {report_type}\n"
         md += f"**Tone:** {tone}\n"
@@ -804,15 +804,15 @@ For more help, visit {self.config.get("base_url", "https://github.com/ArcDevs/se
         return md
 
 def main():
-    """Main entry point for the SearchFlow CLI"""
+    """Main entry point for the SearchFlox CLI"""
     if sys.platform == "win32" and sys.version_info >= (3,8):
          asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
     
-    cli = SearchFlowCLI()
+    cli = SearchFloxCLI()
     try:
         asyncio.run(cli.run())
     except KeyboardInterrupt:
-        print(f"\n{C.YELLOW}👋 SearchFlow process terminated by user.{C.RESET}")
+        print(f"\n{C.YELLOW}👋 SearchFlox process terminated by user.{C.RESET}")
     except Exception as e:
         print(f"{ERROR_COLOR}❌ A critical error occurred: {e}{C.RESET}")
 

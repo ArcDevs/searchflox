@@ -1,4 +1,4 @@
-"""Setup configuration for SearchFlow PyPI package"""
+"""Setup configuration for SearchFlox PyPI package"""
 
 from setuptools import setup, find_packages
 import os
@@ -12,17 +12,17 @@ with open(os.path.join(this_directory, 'requirements.txt'), encoding='utf-8') as
 
 setup(
     name="searchflox",
-    version="1.0.1",
+    version="1.0.2",
     author="KOBULA & UTKRASH RISHI",
     author_email="arcdev.90@gmail.com",
     description="AI-Powered Research Platform - Advanced CLI tool for intelligent research and report generation",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ArcDevs/searchflow",
+    url="https://github.com/ArcDevs/searchflox",
     project_urls={
-        "Bug Reports": "https://github.com/ArcDevs/searchflow/issues",
-        "Source": "https://github.com/ArcDevs/searchflow",
-        "Documentation": "https://github.com/ArcDevs/searchflow#readme",
+        "Bug Reports": "https://github.com/ArcDevs/searchflox/issues",
+        "Source": "https://github.com/ArcDevs/searchflox",
+        "Documentation": "https://github.com/ArcDevs/searchflox#readme",
     },
     packages=find_packages(), 
     classifiers=[
@@ -64,14 +64,15 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "searchflow=searchflox.main:main",  
+            "searchflox=searchflox.main:main",  
             "sf=searchflox.main:main",       
         ],
     },
     keywords=[
         "ai", "research", "search", "cli", "artificial-intelligence",
         "websocket", "automation", "report-generation", "data-analysis",
-        "intelligence", "academic", "professional", "async", "real-time"
+        "intelligence", "academic", "professional", "async", "real-time",
+        "searchflox"
     ],
     package_data={
         "searchflox": [
