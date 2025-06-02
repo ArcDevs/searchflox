@@ -1,10 +1,10 @@
-# SearchFlow
+# SearchFlox
 
 [![PyPI version](https://badge.fury.io/py/searchflow.svg)](https://badge.fury.io/py/searchflow)
 [![Python Versions](https://img.shields.io/pypi/pyversions/searchflow.svg)](https://pypi.org/project/searchflow/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**SearchFlow, powered by ArcDevs, is an AI-Powered Research Platform and advanced CLI tool leveraging ArcDevs Intelligence for intelligent research and automated report generation.**
+**SearchFlox, powered by ArcDevs, is an AI-Powered Research Platform and advanced CLI tool leveraging ArcDevs Intelligence for intelligent research and automated report generation.**
 
 It utilizes AI agents to connect to services and perform comprehensive searches, analyze information, and compile reports based on user queries.
 *(For educational purposes, this project explores concepts similar to those that might be used by services like `searc.ai`.)*
@@ -22,7 +22,7 @@ It utilizes AI agents to connect to services and perform comprehensive searches,
 
 ## Installation
 
-You can install SearchFlow using pip:
+You can install SearchFlox using pip:
 
 ```bash
 pip install searchflow
