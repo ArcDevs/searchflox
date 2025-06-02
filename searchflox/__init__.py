@@ -1,5 +1,5 @@
 """
-SearchFlow - AI-Powered Research Platform
+SearchFlox - AI-Powered Research Platform
 A powerful CLI tool for AI-powered research and report generation.
 """
 

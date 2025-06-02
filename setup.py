@@ -12,9 +12,9 @@ with open(os.path.join(this_directory, 'requirements.txt'), encoding='utf-8') as
 
 setup(
     name="searchflox",
-    version="1.0.0",
+    version="1.0.1",
     author="KOBULA & UTKRASH RISHI",
-    author_email="support@arcdevs.com",
+    author_email="arcdev.90@gmail.com",
     description="AI-Powered Research Platform - Advanced CLI tool for intelligent research and report generation",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -64,8 +64,8 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "searchflow=searchflow.main:main",
-            "sf=searchflow.main:main", 
+            "searchflow=searchflox.main:main",  
+            "sf=searchflox.main:main",       
         ],
     },
     keywords=[
